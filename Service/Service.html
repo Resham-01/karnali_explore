@@ -4,13 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket Booking</title>
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="ticket-booking.css">
-    <style>
 
+    <link rel="stylesheet" href="Service.css">
+    <style>
+        /* Add unique colors for icons */
+        .service-card:nth-child(1) i {
+            color: #ff6b6b;
+        }
+
+        .service-card:nth-child(2) i {
+            color: #51cf66;
+        }
+
+        .service-card:nth-child(3) i {
+            color: #339af0;
+        }
     </style>
 </head>
 
@@ -18,7 +30,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="./../Home/index.html">
                 <h3>KARNALI</h3>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -26,11 +38,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="destination.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../Home/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../Destination/destination.html">Destinations</a></li>
                     <li class="nav-item"><a class="nav-link" href="Service.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
-                    
+                    <li class="nav-item"><a class="nav-link" href="./../Contact/Contact.html">Contact</a></li>
+
                     <!-- Login and Signup Icons -->
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
@@ -46,60 +58,6 @@
             </div>
         </div>
     </nav>
-
-
-    <div class="container py-5">
-        <h1 class="section-title">Ticket Booking</h1>
-
-        <!-- Booking Terms and Conditions -->
-        <div class="terms-section">
-            <h3>Booking Terms & Conditions</h3>
-            <ul>
-                <li>Tickets are non-refundable once booked.</li>
-                <li>Changes to the booking are allowed up to 24 hours before the scheduled date.</li>
-                <li>A valid ID is required at the time of ticket validation.</li>
-                <li>Any cancellation requests must be made 48 hours before departure.</li>
-            </ul>
-        </div>
-
-        <!-- Price Section -->
-        <div class="price-section">
-            <h3>Ticket Price Details</h3>
-            <p><strong>Destination:</strong> Surkhet Valley</p>
-            <p><strong>Price:</strong> $100</p>
-            <p><strong>Tax & Fees:</strong> $20</p>
-            <p><strong>Total:</strong> $120</p>
-        </div>
-
-        <!-- Payment Section -->
-        <div class="payment-section">
-            <h3>Payment Method</h3>
-            <p>Select your payment method and proceed with the payment:</p>
-            <form id="payment-form">
-                <div class="wallet-option">
-                    <!-- eSewa Button with Logo only -->
-                    <button type="button" class="wallet-button esewa-button"
-                        onclick="window.location.href='https://www.esewa.com.np'">
-                        <img src="image/esewa.png" alt="eSewa Logo">
-                    </button>
-
-                    <!-- Khalti Button with Logo only -->
-                    <button type="button" class="wallet-button khalti-button"
-                        onclick="window.location.href='https://www.khalti.com'">
-                        <img src="image/khalti.png" alt="Khalti Logo">
-                    </button>
-                </div>
-
-                <div class="mt-3">
-                    <label for="amount">Amount to Pay:</label>
-                    <input type="text" id="amount" class="form-control" value="$120" disabled>
-                </div>
-
-                <button type="submit" class="btn btn-success mt-3">Pay Now</button>
-            </form>
-        </div>
-    </div>
-
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -165,19 +123,98 @@
         </div>
     </div>
 
+    <!-- Tourist Guide Section -->
+    <section id="tourist-guide" class="py-5 bg-light">
+        <div class="container fade-in">
+            <h2 class="text-center mb-4">Tourist Guide Services</h2>
+
+            <!-- Service 1: Local Guides -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8">
+                    <div class="service-card p-4 bg-white shadow">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-fill display-3 text-primary me-4"></i>
+                            <div>
+                                <h5>Local Guides</h5>
+                                <p>Explore Karnali Province with our expert local guides who will show you the hidden
+                                    gems of the region.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Tour Packages -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8">
+                    <div class="service-card p-4 bg-white shadow">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-map-fill display-3 text-success me-4"></i>
+                            <div>
+                                <h5>Tour Packages</h5>
+                                <p>Choose from our curated tour packages to make the most of your trip to Karnali
+                                    Province.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Support & Assistance -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8">
+                    <div class="service-card p-4 bg-white shadow">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-chat-dots-fill display-3 text-warning me-4"></i>
+                            <div>
+                                <h5>Support & Assistance</h5>
+                                <p>Our team is here to provide all the support you need during your travels in Karnali
+                                    Province.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: Cultural Heritage Tours -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8">
+                    <div class="service-card p-4 bg-white shadow">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-building display-3 text-danger me-4"></i>
+                            <div>
+                                <h5>Cultural Heritage Tours</h5>
+                                <p>Discover the rich cultural heritage of Karnali Province, including historical
+                                    temples, monasteries, and festivals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 5: Adventure Activities -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8">
+                    <div class="service-card p-4 bg-white shadow">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-binoculars-fill display-3 text-info me-4"></i>
+                            <div>
+                                <h5>Adventure Activities</h5>
+                                <p>Engage in thrilling adventures such as rafting on the Karnali River, trekking, and
+                                    wildlife exploration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Explore Karnali. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        // Simulate the payment process
-        document.getElementById("payment-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-            alert("Payment Successful! You have booked your ticket.");
-        });
-    </script>
 </body>
 
 </html>

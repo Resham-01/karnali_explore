@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Ticket Booking</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="ticket-booking.css">
+    <style>
+
+    </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="./../Home/index.html">
+                <h3>KARNALI</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./../Home/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../Destination/destination.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../Service/Service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../Contact/Contact.html">Contact</a></li>
+
+                    <!-- Login and Signup Icons -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-person-circle"></i> Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
+                            <i class="bi bi-person-plus-fill"></i> Sign Up
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>">
                 <h3>KARNALI</h3>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -23,10 +57,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="destination.html">Destinations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Service.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
-                    
+                    <li class="nav-item"><a class="nav-link" href="./../Destination/destination.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../Service/">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../Contact/Contact.html">Contact</a></li>
+
                     <!-- Login and Signup Icons -->
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
@@ -42,6 +76,60 @@
             </div>
         </div>
     </nav>
+
+
+    <div class="container py-5">
+        <h1 class="section-title">Ticket Booking</h1>
+
+        <!-- Booking Terms and Conditions -->
+        <div class="terms-section">
+            <h3>Booking Terms & Conditions</h3>
+            <ul>
+                <li>Tickets are non-refundable once booked.</li>
+                <li>Changes to the booking are allowed up to 24 hours before the scheduled date.</li>
+                <li>A valid ID is required at the time of ticket validation.</li>
+                <li>Any cancellation requests must be made 48 hours before departure.</li>
+            </ul>
+        </div>
+
+        <!-- Price Section -->
+        <div class="price-section">
+            <h3>Ticket Price Details</h3>
+            <p><strong>Destination:</strong> Surkhet Valley</p>
+            <p><strong>Price:</strong> $100</p>
+            <p><strong>Tax & Fees:</strong> $20</p>
+            <p><strong>Total:</strong> $120</p>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-section">
+            <h3>Payment Method</h3>
+            <p>Select your payment method and proceed with the payment:</p>
+            <form id="payment-form">
+                <div class="wallet-option">
+                    <!-- eSewa Button with Logo only -->
+                    <button type="button" class="wallet-button esewa-button"
+                        onclick="window.location.href='https://www.esewa.com.np'">
+                        <img src="image/esewa.png" alt="eSewa Logo">
+                    </button>
+
+                    <!-- Khalti Button with Logo only -->
+                    <button type="button" class="wallet-button khalti-button"
+                        onclick="window.location.href='https://www.khalti.com'">
+                        <img src="image/khalti.png" alt="Khalti Logo">
+                    </button>
+                </div>
+
+                <div class="mt-3">
+                    <label for="amount">Amount to Pay:</label>
+                    <input type="text" id="amount" class="form-control" value="$120" disabled>
+                </div>
+
+                <button type="submit" class="btn btn-success mt-3">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -108,58 +196,18 @@
     </div>
 
 
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Us</h2>
-            <div class="row">
-                <!-- Contact Form -->
-                <div class="col-md-6">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Your Name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Your Email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input type="text" class="form-control" id="phone" placeholder="Your Phone Number">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </form>
-                </div>
-
-                <!-- Contact Info and Map -->
-                <div class="col-md-6">
-                    <h4>Contact Information</h4>
-                    <p><strong>Address:</strong> 1234 Street Name, City, Country</p>
-                    <p><strong>Email:</strong> contact@domain.com</p>
-                    <p><strong>Phone:</strong> +123 456 7890</p>
-                    <h4>Find Us Here</h4>
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434508738!2d144.96305781531542!3d-37.816279979751524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577697edb1b563!2sMelbourne%20CBD%2C%20VIC%2C%20Australia!5e0!3m2!1sen!2snp!4v1687558292113!5m2!1sen!2snp" 
-                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Explore Karnali. All Rights Reserved.</p>
     </footer>
 
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simulate the payment process
+        document.getElementById("payment-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Payment Successful! You have booked your ticket.");
+        });
+    </script>
 </body>
+
 </html>

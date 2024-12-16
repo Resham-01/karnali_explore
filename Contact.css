@@ -1,0 +1,101 @@
+/* Make navbar transparent and overlay on carousel */
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    /* Transparent black background */
+    z-index: 10;
+    /* Ensure it appears on top of the carousel */
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#contact {
+    background-color: #f9f9f9;
+}
+
+h2 {
+    animation: fadeInDown 1s ease-in-out;
+}
+
+form {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.ratio {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+footer {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

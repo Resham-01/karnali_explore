@@ -1,0 +1,125 @@
+/* Navbar styling */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Background video styling */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background: black; /* Fallback for browsers that don't support video */
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ensures the video fills the container */
+    opacity: 0.8; /* Optional transparency */
+}
+
+/* Content styling */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 14% 5%; /* Use percentages for better responsiveness */
+    background-color: rgba(30, 30, 30, 0.5); /* Optional overlay */
+}
+
+.content h1 {
+    font-size: 2.5rem;
+}
+
+.heart {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.himalayas {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* Card image styling */
+.destination-card .card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border-radius: 0.25rem 0.25rem 0 0; /* Matches card border radius */
+    overflow: hidden;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animation on hover */
+.destination-card:hover .card-img-top {
+    transform: scale(1.05); /* Zoom effect */
+}
+
+.destination-card {
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 0.25rem;
+}
+
+.destination-card:hover {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .content {
+        padding: 10% 5%;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .heart {
+        font-size: 1.5rem;
+    }
+
+    .himalayas {
+        font-size: 1.2rem;
+    }
+
+    .destination-card .card-img-top {
+        height: 150px; /* Adjust image height */
+    }
+}
+
+@media (max-width: 576px) {
+    .content {
+        padding: 5% 3%;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .heart {
+        font-size: 1.2rem;
+    }
+
+    .himalayas {
+        font-size: 1rem;
+    }
+
+    .destination-card .card-img-top {
+        height: 120px; /* Further adjust for very small screens */
+    }
+}

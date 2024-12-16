@@ -1,0 +1,111 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-nav .nav-link {
+    font-weight: normal;
+    /* Default font weight */
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    /* Smooth transition for color and font weight */
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    /* Make text bold on hover */
+    color: #000000;
+    /* Change color to dark black on hover */
+}
+
+
+/* ticketing css start */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #007bff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.terms-section {
+    margin-bottom: 40px;
+    animation: slideIn 1s ease-out;
+}
+
+.price-section {
+    margin-bottom: 30px;
+    animation: slideIn 1s ease-out;
+}
+
+.payment-section {
+    margin-top: 30px;
+    animation: slideIn 1s ease-out;
+}
+
+.wallet-option {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wallet-button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.wallet-button:hover {
+    transform: scale(1.05);
+}
+
+/* eSewa Button Styling */
+.esewa-button {
+    width: 300px;
+    color: white;
+}
+
+.esewa-button img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Khalti Button Styling */
+.khalti-button {
+    width: 300px;
+    margin-right: 650px;
+    color: white;
+}
+
+.khalti-button img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

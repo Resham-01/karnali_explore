@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="ticket-booking.css">
     <style>
 
@@ -16,9 +17,6 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="<!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="./../Home/index.html">
@@ -30,35 +28,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="./../Home/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./../Destination/destination.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../Accomadation/accomadation.html">Accomadation</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="./../Service/Service.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./../Contact/Contact.html">Contact</a></li>
-
-                    <!-- Login and Signup Icons -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
-                            <i class="bi bi-person-circle"></i> Login
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
-                            <i class="bi bi-person-plus-fill"></i> Sign Up
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>">
-                <h3>KARNALI</h3>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./../Destination/destination.html">Destinations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./../Service/">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="./../Contact/Contact.html">Contact</a></li>
 
                     <!-- Login and Signup Icons -->
@@ -110,13 +82,13 @@
                     <!-- eSewa Button with Logo only -->
                     <button type="button" class="wallet-button esewa-button"
                         onclick="window.location.href='https://www.esewa.com.np'">
-                        <img src="image/esewa.png" alt="eSewa Logo">
+                        <img src="./../image/esewa.png" alt="eSewa Logo">
                     </button>
 
                     <!-- Khalti Button with Logo only -->
                     <button type="button" class="wallet-button khalti-button"
                         onclick="window.location.href='https://www.khalti.com'">
-                        <img src="image/khalti.png" alt="Khalti Logo">
+                        <img src="./../image/khalti.png" alt="Khalti Logo">
                     </button>
                 </div>
 
@@ -202,6 +174,15 @@
     </footer>
 
     <script>
+        // Navbar animation
+        gsap.from("nav", {
+            duration: 1,
+            y: -100,
+            opacity: 0,
+            ease: "power2.out"
+        });
+
+
         // Simulate the payment process
         document.getElementById("payment-form").addEventListener("submit", function (event) {
             event.preventDefault();

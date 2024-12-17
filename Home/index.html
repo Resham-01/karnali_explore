@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
     <link rel="stylesheet" href="index.css">
     <style>
 
@@ -27,7 +29,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./../Destination/destination.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./../Accomadation/accomadation.html">Accomadation</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="./../Service/Service.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="./../Contact/Contact.html">Contact</a></li>
 
@@ -52,19 +55,18 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <h5 class="text-center modal-title" id="loginModalLabel">Log In</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="mb-3">
-                            <label for="loginEmail" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Email address">
+                            <label for="loginEmail">Email address</label>
                         </div>
-                        <div class="mb-3">
-                            <label for="loginPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="loginPassword"
-                                placeholder="Enter your password">
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                            <label for="loginPassword">Password</label>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Login</button>
                         <div class="mt-3 text-center">
@@ -125,7 +127,13 @@
         <div class="hero-content">
             <h1>Welcome to Explore Karnali</h1>
             <p>Discover the world's best travel destinations</p>
-            <a href="#destinations" class="btn btn-light btn-lg mt-3">Get Started</a>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+
+
         </div>
     </div>
 
@@ -141,7 +149,8 @@
                         <img src="../image/Districts/Humla.webp" class="card-img-top" alt="Humla District">
                         <div class="card-body">
                             <h5 class="card-title">Humla</h5>
-                            <p class="card-text">Explore the untouched beauty of Humla, known for its trekking routes and cultural richness.</p>
+                            <p class="card-text">Explore the untouched beauty of Humla, known for its trekking routes
+                                and cultural richness.</p>
                         </div>
                     </div>
                 </div>
@@ -150,7 +159,8 @@
                         <img src="../image/Districts/Jumla11.jpg" class="card-img-top" alt="Jumla District">
                         <div class="card-body">
                             <h5 class="card-title">Jumla</h5>
-                            <p class="card-text">Discover Jumla, famous for its unique apple orchards and beautiful Rara Lake.</p>
+                            <p class="card-text">Discover Jumla, famous for its unique apple orchards and beautiful Rara
+                                Lake.</p>
                         </div>
                     </div>
                 </div>
@@ -159,7 +169,8 @@
                         <img src="../image/Districts/Dolpa.webp" class="card-img-top" alt="Dolpa District">
                         <div class="card-body">
                             <h5 class="card-title">Dolpa</h5>
-                            <p class="card-text">Dolpa is home to Shey Phoksundo Lake and an incredible Himalayan landscape.</p>
+                            <p class="card-text">Dolpa is home to Shey Phoksundo Lake and an incredible Himalayan
+                                landscape.</p>
                         </div>
                     </div>
                 </div>
@@ -168,7 +179,8 @@
                         <img src="../image/Districts/Mugu.jpg" class="card-img-top" alt="Mugu District">
                         <div class="card-body">
                             <h5 class="card-title">Mugu</h5>
-                            <p class="card-text">Mugu offers serene landscapes and Rara Lake, the largest lake in Nepal.</p>
+                            <p class="card-text">Mugu offers serene landscapes and Rara Lake, the largest lake in Nepal.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -186,7 +198,8 @@
                         <img src="../image/Districts/Surkhet.jpg" class="card-img-top" alt="Surkhet District">
                         <div class="card-body">
                             <h5 class="card-title">Surkhet</h5>
-                            <p class="card-text">A gateway to Karnali, Surkhet is known for its valley beauty and rich biodiversity.</p>
+                            <p class="card-text">A gateway to Karnali, Surkhet is known for its valley beauty and rich
+                                biodiversity.</p>
                         </div>
                     </div>
                 </div>
@@ -195,7 +208,8 @@
                         <img src="../image/Districts/Dailekh-bazar.jpg" class="card-img-top" alt="Dailekh District">
                         <div class="card-body">
                             <h5 class="card-title">Dailekh</h5>
-                            <p class="card-text">Famous for its temples and natural hot springs, Dailekh is a must-visit.</p>
+                            <p class="card-text">Famous for its temples and natural hot springs, Dailekh is a
+                                must-visit.</p>
                         </div>
                     </div>
                 </div>
@@ -219,10 +233,12 @@
                 </div>
                 <div class="col-md-4 py-2">
                     <div class="card destination-card">
-                        <img src="../image/Districts/Western Rukum.jpg" class="card-img-top" alt="Western Rukum District">
+                        <img src="../image/Districts/Western Rukum.jpg" class="card-img-top"
+                            alt="Western Rukum District">
                         <div class="card-body">
                             <h5 class="card-title">Western Rukum</h5>
-                            <p class="card-text">Western Rukum is known for its stunning natural beauty, unique culture, and historical significance.</p>
+                            <p class="card-text">Western Rukum is known for its stunning natural beauty, unique culture,
+                                and historical significance.</p>
                         </div>
                     </div>
                 </div>
@@ -230,22 +246,6 @@
         </div>
     </section>
 
-    <!-- Plane Ticketing Section -->
-    <section id="ticketing" class="bg-light py-5">
-        <div class="container fade-in">
-            <h2 class="text-center mb-4">Book Your Flight to Surkhet</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="service-card bg-info">
-                        <h3>Easy Online Booking</h3>
-                        <p>Book flights to Surkhet from any major city in Nepal with our simple, fast, and secure
-                            system.</p>
-                        <a href="ticket-booking.html" class="btn btn-primary">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Tourist Guide Section -->
     <section id="tourist-guide" class="py-5">
@@ -274,6 +274,12 @@
                         <p>Our team is here to provide all the support you need during your travels in Surkhet.</p>
                     </div>
                 </div>
+                <div class="service-card bg-info my-4">
+                    <h3>Easy Online Booking</h3>
+                    <p>Book flights to Surkhet from any major city in Nepal with our simple, fast, and secure
+                        system.</p>
+                    <a href="./../TicketBooking/ticket-booking.html" class="btn btn-primary">Book Now</a>
+                </div>
             </div>
         </div>
     </section>
@@ -301,11 +307,112 @@
     </section>
 
 
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </footer>
+    </div>
+
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="text-black text-center py-3">
         <p>&copy; 2024 Explore Karnali. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Navbar animation
+        gsap.from("nav", {
+            duration: 1,
+            y: -100,
+            opacity: 0,
+            ease: "power2.out"
+        });
+
+
+        // Animate the hero section
+        gsap.from(".hero-content h1", {
+            opacity: 0,
+            y: -50,
+            duration: 5,
+            ease: "power3.out",
+        });
+
+        gsap.from(".hero-content p", {
+            opacity: 0,
+            y: 50,
+            duration: 5,
+            delay: 0.3,
+            ease: "power3.out",
+        });
+
+        gsap.from(".hero-content form", {
+            opacity: 0,
+            scale: 0.9,
+            duration: 5,
+            delay: 0.6,
+            ease: "power3.out",
+        });
+
+        // Animate the district cards
+        gsap.from(".destination-card", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.2, // Delay between each card animation
+            scrollTrigger: {
+                trigger: "#destinations",
+                start: "top 80%", // Start animation when 80% of the section is visible
+            },
+        });
+
+        // Animate the plane ticketing and tourist guide sections
+        gsap.from(".fade-out", {
+            opacity: 1,
+            y: 50,
+            duration: 1,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: ".fade-out",
+                start: "top 85%", // Animation starts when the section comes into view
+            },
+        });
+    </script>
+
+
 </body>
 
 </html>
